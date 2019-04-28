@@ -18,14 +18,15 @@ let displayAction = () => {
     $("#deletedItems").append(
       "<div class='deleted'>" +
         disItems[key] +
-        "<a href='#' data-ntag='" +
+        "<button data-ntag='" +
         key +
-        "'>X</a></div>"
+        "'>Add</button></div>"
     );
   });
 };
 
-$(".iconA a").click(function() {
+$(".iconA button").click(function() {
+  event.preventDefault();
   $(this)
     .parent()
     .parent()
@@ -41,6 +42,8 @@ $(".iconA a").click(function() {
   displayAction();
 });
 
-$(".deleted a").click(function() {});
+$(".deleted button").click(function() {
+  event.preventDefault();
+});
 
 console.log(disItems);

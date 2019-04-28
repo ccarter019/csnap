@@ -56,7 +56,10 @@ body {
   text-decoration: none;
 }
 
-.deleted a {
+.deleted button {
   background: #008000;
   color: #fff;
+  margin: 10px;
+  text-transform: uppercase;
+  font-size: 0.8em;
 }
