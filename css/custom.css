@@ -63,3 +63,9 @@ body {
   text-transform: uppercase;
   font-size: 0.8em;
 }
+
+ul.deleted li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

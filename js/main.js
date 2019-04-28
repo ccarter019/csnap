@@ -18,9 +18,9 @@ let displayAction = () => {
     $("#deletedItems").append(
       "<div class='deleted'>" +
         disItems[key] +
-        "<button data-ntag='" +
+        "<button data-atag='" +
         key +
-        "'>Add</button></div>"
+        "' disabled>Removed</button></div>"
     );
   });
 };
@@ -42,8 +42,12 @@ $(".iconA button").click(function() {
   displayAction();
 });
 
-$(".deleted button").click(function() {
-  event.preventDefault();
+$("#deletedItemsB button").click(function() {
+  var showId = $(this).data("atag");
+
+  $(".fieldCont").show();
+  $("#deletedItems").empty();
+  disItems = 0;
 });
 
 console.log(disItems);
