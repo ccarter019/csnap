@@ -1,0 +1,56 @@
+body {
+  background: #f5f5f5;
+  font-family: "Roboto Slab", serif;
+}
+
+.wrap {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrapTitle {
+  font-weight: bold;
+}
+
+.wrapTitle h3 {
+  text-transform: uppercase;
+  font-size: 140%;
+}
+
+.wrapForm {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.wrapForm label {
+  text-transform: uppercase;
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  font-size: 0.8em;
+}
+
+.wrapForm input {
+  clear: both;
+  width: 200px;
+}
+
+.wrapForm label,
+.wrapForm input,
+.wrapForm textarea {
+  margin: 12px;
+}
+
+.iconA {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: #ff0000;
+  font-size: 10px;
+}
+
+.iconA a {
+  color: #000000;
+  text-decoration: none;
+}
