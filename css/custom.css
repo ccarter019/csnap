@@ -42,7 +42,8 @@ body {
   margin: 12px;
 }
 
-.iconA {
+.iconA,
+.deleted a {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -53,4 +54,9 @@ body {
 .iconA a {
   color: #000000;
   text-decoration: none;
+}
+
+.deleted a {
+  background: #008000;
+  color: #fff;
 }

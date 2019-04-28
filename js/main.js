@@ -13,12 +13,15 @@ let disItems = new Object();
 let displayAction = () => {
   var listBox = $("#deletedItems");
 
+  $("#deletedItems").empty();
   Object.keys(disItems).forEach(function(key, index) {
-    console.log(key);
-    $("#deletedItems").empty();
-    $("#deletedItems").append(key);
-    $("#deletedItems").appendTo("Hello");
-    console.log(index);
+    $("#deletedItems").append(
+      "<div class='deleted'>" +
+        disItems[key] +
+        "<a href='#' data-ntag='" +
+        key +
+        "'>X</a></div>"
+    );
   });
 };
 
@@ -27,21 +30,17 @@ $(".iconA a").click(function() {
     .parent()
     .parent()
     .hide();
-  var cField = $(this).data("ntag");
-  console.log(
-    $(this)
-      .closest("div")
-      .find("label")
-      .html()
-  );
-  var cFieldName = $(this)
-    .closest("div")
+  var cName = $(this)
+    .parents("div")
+    .eq(1)
     .find("label")
     .html();
-  //console.log(cFieldName);
-  disItems[cField] = cFieldName;
+  var cField = $(this).data("ntag");
+  disItems[cField] = cName;
   delete items.cField;
   displayAction();
 });
+
+$(".deleted a").click(function() {});
 
 console.log(disItems);
