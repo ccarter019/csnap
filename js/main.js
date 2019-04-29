@@ -47,7 +47,12 @@ $("#deletedItemsB button").click(function() {
 
   $(".fieldCont").show();
   $("#deletedItems").empty();
-  disItems = 0;
+  disItems = {};
+});
+
+$("input#submit").click(function() {
+  event.preventDefault();
+  alert("Thank you for contacting us!");
 });
 
 console.log(disItems);
